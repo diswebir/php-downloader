@@ -1,0 +1,15 @@
+# سیستم‌عامل
+.DS_Store
+Thumbs.db
+
+# محیط
+.env
+
+# خروجی‌ها
+downloads/*
+!downloads/.gitkeep
+!downloads/.htaccess
+
+tmp/*
+!tmp/.gitkeep
+!tmp/.htaccess
