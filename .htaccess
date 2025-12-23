@@ -1,0 +1,17 @@
+# جلوگیری از اجرای اسکریپت و لیست‌کردن محتوا
+Options -Indexes
+
+# مسدودسازی اجرای PHP (Apache 2.4+)
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.ph(p[0-9]?|t|tml)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+# سازگاری با Apache 2.2
+<IfModule !mod_authz_core.c>
+  <FilesMatch "\.ph(p[0-9]?|t|tml)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
